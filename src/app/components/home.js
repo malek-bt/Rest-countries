@@ -28,7 +28,8 @@ const HomePage = () => {
     const filteredCountries = data?.filter((country) => {
       const bySearch = country.name.common.toLowerCase().includes(searchInput.toLowerCase());
       const byRegion = selectedRegion === '' || country.region.includes(selectedRegion);
-      return bySearch && byRegion;
+      const excludeCountry = country.name.common.toLowerCase() !== 'israel'; 
+      return bySearch && byRegion && excludeCountry;
     });
 
     setFilteredData(filteredCountries);
