@@ -1,15 +1,17 @@
+
 import { create } from "zustand";
 
 const useStore = create((set) => {
-  const initialDarkMode = typeof window !== 'undefined' && localStorage.getItem('dark')  ;
+  
 
   return {
-    dark: initialDarkMode,
+    dark: true,
     toggle: () => {
       set((state) => {
         const dark = !state.dark;
         localStorage.setItem("dark", dark.toString());
-        return { dark };
+        
+        return { dark  };
       });
     },
   };

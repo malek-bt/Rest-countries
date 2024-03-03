@@ -1,8 +1,9 @@
-"use client";
+
 import Link from "next/link";
 import useStore from "../store";
 import { motion } from "framer-motion"
 import { Tilt } from "react-tilt";
+
 
 const CountryCard = ({ item }) => {
   const darkMode = useStore((state) => state.dark);
@@ -13,6 +14,7 @@ const CountryCard = ({ item }) => {
   const flagSrc = item.flags.png;
   const flagAlt = item.flags.alt;
 
+ 
   
 
   const fadeIn = (direction, type, delay, duration) => {

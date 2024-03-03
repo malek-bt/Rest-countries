@@ -1,5 +1,5 @@
 "use client";
-import { Suspense, useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 import useStore from "../store";
 import Header from "./header";
 import Search from "./search";
@@ -20,6 +20,8 @@ const HomePage = () => {
   useEffect(() => {
     fetchData();
   }, [data !== null]);
+
+ 
 
   
 
