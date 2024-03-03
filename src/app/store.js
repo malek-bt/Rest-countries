@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
 const useStore = create((set) => {
-  const initialDarkMode = typeof window !== 'undefined' ? localStorage.getItem('dark') === 'true' : false;
+  const initialDarkMode = typeof window !== 'undefined' ? localStorage.getItem('dark') === 'true' : true;
 
   return {
     dark: initialDarkMode,
