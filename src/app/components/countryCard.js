@@ -40,14 +40,15 @@ const CountryCard = ({ item }) => {
   };
 
   return (
-    <Tilt>
+    <div className=" w-[80%] mx-auto md:w-[300px]">
+    <Tilt >
     
       <motion.div variants={fadeIn('right','spring',0.5,0.75)}
-        className={`w-[75%] shadow-xl md:w-[300px] mx-auto rounded-lg  ${
+        className={`w-full shadow-xl  mx-auto rounded-lg  ${
           darkMode ? "bg-lightDark" : "bg-white"
         }`}
       >
-        <div options={{max:45 , scale : 1 , speed : 450}}>
+        <div options={{max:45 , scale : 1 , speed : 450}} >
         <Link href={{ pathname: `/${name}` }}>
           <img
             className="w-[100%] rounded-t-lg h-40"
@@ -82,6 +83,7 @@ const CountryCard = ({ item }) => {
         </div>
     </motion.div>
     </Tilt>
+    </div>
   );
 };
 export default CountryCard;
